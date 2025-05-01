@@ -1,0 +1,124 @@
+/* Fleet Page Styles */
+
+/* Page Title */
+.page-title {
+  background-color: var(--light-color);
+  padding: 6rem 0 3rem;
+  text-align: center;
+}
+
+.page-title h1 {
+  color: var(--dark-color);
+  margin-bottom: 10px;
+}
+
+.breadcrumbs {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+
+.breadcrumbs a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.breadcrumbs a:hover {
+  color: var(--secondary-color);
+}
+
+/* Fleet Filters */
+.fleet-filters {
+  padding: 3rem 0;
+  background-color: var(--white-color);
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  background-color: var(--white-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 30px;
+  color: var(--dark-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+/* Select Styling */
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--light-gray-color);
+  border-radius: var(--border-radius);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+/* Fleet Grid */
+.fleet-grid {
+  padding: 3rem 0 5rem;
+  background-color: var(--light-color);
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Responsive styles for fleet page */
+@media (max-width: 992px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    padding: 5rem 0 2rem;
+  }
+  
+  .fleet-filters,
+  .fleet-grid {
+    padding: 2rem 0;
+  }
+}

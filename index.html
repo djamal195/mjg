@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location 401 Majunga - Location de véhicules</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/android-chrome-512x512.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="logo-container">
+        <img src="assets/logo.jpg" alt="Location 401 Majunga" class="logo">
+      </div>
+      <nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="active">Accueil</a></li>
+          <li><a href="#vehicules">Nos Véhicules</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">À Propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="booking-button"><a href="#booking">Réserver</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Location de Véhicules à Majunga</h1>
+      <h2>Louez en toute liberté et sécurité</h2>
+      <div class="hero-buttons">
+        <a href="#booking" class="btn btn-primary">Réserver maintenant</a>
+        <a href="#vehicules" class="btn btn-secondary">Voir nos véhicules</a>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- Booking Form -->
+<section id="booking" class="booking-section">
+  <div class="container">
+    <h2 class="section-title">Réservez votre véhicule</h2>
+    <div class="booking-form-container">
+      <form id="booking-form" class="booking-form">
+        <!-- Nouveaux champs de contact -->
+        <div class="form-group">
+          <label for="booking-name">Votre nom</label>
+          <input type="text" id="booking-name" required>
+        </div>
+        <div class="form-group">
+          <label for="booking-email">Votre email</label>
+          <input type="email" id="booking-email" required>
+        </div>
+        <div class="form-group">
+          <label for="booking-phone">Votre téléphone</label>
+          <input type="tel" id="booking-phone">
+        </div>
+        <!-- Champs existants -->
+        <div class="form-group">
+          <label for="vehicle-type">Type de véhicule</label>
+          <select id="vehicle-type" required>
+            <option value="">Sélectionnez</option>
+            <option value="car">Voiture</option>
+            <option value="motorcycle">Moto/Scooter</option>
+            <option value="atv">Quad/ATV</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pickup-date">Date de début</label>
+          <input type="date" id="pickup-date" required>
+        </div>
+        <div class="form-group">
+          <label for="return-date">Date de fin</label>
+          <input type="date" id="return-date" required>
+        </div>
+        <div class="form-group">
+          <label for="pickup-location">Lieu de prise en charge</label>
+          <select id="pickup-location" required>
+            <option value="">Sélectionnez</option>
+            <option value="office">Nos bureaux</option>
+            <option value="airport">Aéroport de Majunga</option>
+            <option value="hotel">Votre hôtel</option>
+          </select>
+        </div>
+        <!-- Affichage du prix estimé -->
+        <div id="estimated-price" class="price-estimate"></div>
+        <button type="submit" class="btn btn-primary">Réserver maintenant</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <!-- Why Choose Us -->
+  <section id="benefits" class="benefits-section">
+    <div class="container">
+      <h2 class="section-title">Pourquoi nous choisir</h2>
+      <div class="benefits-container">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3>Véhicules récents</h3>
+          <p>Notre flotte est composée de véhicules récents et bien entretenus pour votre sécurité et confort.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <h3>Prix compétitifs</h3>
+          <p>Nous offrons les meilleurs tarifs de location avec des forfaits adaptés à tous les budgets.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>Service 24/7</h3>
+          <p>Notre équipe est disponible à tout moment pour répondre à vos besoins et urgences.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3>Livraison partout</h3>
+          <p>Livraison et récupération des véhicules à l'aéroport, hôtels et autres lieux à Majunga.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Categories -->
+  <section id="vehicules" class="vehicles-section">
+    <div class="container">
+      <h2 class="section-title">Notre flotte de véhicules</h2>
+      <div class="vehicle-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="car">Voitures</button>
+        <button class="filter-btn" data-filter="motorcycle">Motos/Scooters</button>
+        <button class="filter-btn" data-filter="atv">Quads/ATVs</button>
+      </div>
+      <div class="vehicles-grid">
+        <!-- Cars -->
+        <div class="vehicle-card" data-category="car">
+          <div class="vehicle-image">
+            <img src="/assets/car-1.jpg" alt="SUV Toyota">
+          </div>
+          <div class="vehicle-details">
+            <h3>KUV 100NXT </h3>
+            <p class="vehicle-type">SUV</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 5 places</li>
+              <li><i class="fas fa-suitcase"></i> 4 bagages</li>
+              <li><i class="fas fa-gas-pump"></i> Diesel</li>
+              <li><i class="fas fa-cog"></i> Automatique</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>75€ <span>/ jour</span></p>
+            </div>
+            <a href="#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+        
+        <div class="vehicle-card" data-category="car">
+          <div class="vehicle-image">
+            <img src="/assets/car-2.jpg" alt="Compact Toyota">
+          </div>
+          <div class="vehicle-details">
+            <h3>SUV ENRANGER</h3>
+            <p class="vehicle-type">Berline</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 5 places</li>
+              <li><i class="fas fa-suitcase"></i> 3 bagages</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-cog"></i> Manuelle</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>55€ <span>/ jour</span></p>
+            </div>
+            <a href="#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <!-- Motorcycles -->
+        <div class="vehicle-card" data-category="motorcycle">
+          <div class="vehicle-image">
+            <img src="/assets/scooter-1.jpg" alt="Scooter">
+          </div>
+          <div class="vehicle-details">
+            <h3>Safari</h3>
+            <p class="vehicle-type">Scooter</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 2 places</li>
+              <li><i class="fas fa-tachometer-alt"></i> 125cc</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-cog"></i> Automatique</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>25€ <span>/ jour</span></p>
+            </div>
+            <a href="#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <!-- ATVs -->
+        <div class="vehicle-card" data-category="atv">
+          <div class="vehicle-image">
+            <img src="/assets/ATV.jpg" alt="Quad/ATV">
+          </div>
+          <div class="vehicle-details">
+            <h3>Yamaha Grizzly</h3>
+            <p class="vehicle-type">Quad/ATV</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 2 place</li>
+              <li><i class="fas fa-tachometer-alt"></i> 350cc</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-mountain"></i> Tout-terrain</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>45€ <span>/ jour</span></p>
+            </div>
+            <a href="#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+      </div>
+      <div class="view-all-container">
+        <a href="pages/fleet.html" class="btn btn-secondary">Voir toute notre flotte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="section-title">Nos Services</h2>
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3>Location longue durée</h3>
+          <p>Tarifs spéciaux pour les locations de plus d'une semaine avec options flexibles.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-map"></i>
+          </div>
+          <h3>Excursions guidées</h3>
+          <p>Découvrez la région de Majunga avec nos circuits touristiques guidés.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shuttle-van"></i>
+          </div>
+          <h3>Transfert aéroport</h3>
+          <p>Service de navette entre l'aéroport et votre lieu de séjour à Majunga.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Assistance routière</h3>
+          <p>Assistance 24/7 en cas de panne ou problème avec votre véhicule de location.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">Ce que disent nos clients</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial active">
+          <div class="testimonial-content">
+            <p>"Excellent service de location. Véhicules en parfait état et personnel très accueillant. Je recommande pour vos séjours à Majunga!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-name">Thomas Dubois</div>
+            <div class="author-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"J'ai loué un quad pour explorer la région et c'était une expérience incroyable. Le véhicule était parfait et le service impeccable."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-name">Sophie Martin</div>
+            <div class="author-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"La location de scooter était simple et rapide. Les prix sont très raisonnables et le personnel est à l'écoute. Je reviendrai!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-name">Jean Roux</div>
+            <div class="author-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title">À Propos de Location 401 Majunga</h2>
+          <p>Fondée en 2018, Location 401 Majunga est la référence en matière de location de véhicules dans la région de Majunga, Madagascar. Notre entreprise s'est donnée pour mission de vous offrir une expérience de location simple, sécurisée et adaptée à vos besoins.</p>
+          <p>Avec notre flotte diversifiée comprenant des voitures, des motos et des quads, nous répondons à tous vos besoins de mobilité, que ce soit pour un séjour d'affaires ou des vacances.</p>
+          <p>Notre équipe expérimentée vous garantit un service de qualité et une assistance personnalisée pour rendre votre séjour à Majunga inoubliable.</p>
+          <a href="pages/about.html" class="btn btn-secondary">En savoir plus</a>
+        </div>
+        <div class="about-image">
+          <img src="assets/team.jpg" alt="L'équipe de Location 401 Majunga">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Contactez-nous</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Adresse</h3>
+            <p>123 Avenue de l'Indépendance<br>Majunga, Madagascar</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Téléphone</h3>
+            <p>+261 34 567 8901<br>+261 32 123 4567</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>info@location401majunga.com<br>reservation@location401majunga.com</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Horaires</h3>
+            <p>Lundi - Samedi: 8h - 19h<br>Dimanche: 9h - 17h</p>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/logo.jpg" alt="Location 401 Majunga">
+          <p>Louez en toute liberté et sécurité</p>
+        </div>
+        <div class="footer-links">
+          <h3>Liens Rapides</h3>
+          <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#vehicules">Nos Véhicules</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">À Propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Suivez-nous</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Inscrivez-vous pour recevoir nos offres spéciales</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Location 401 Majunga. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

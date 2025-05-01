@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre Flotte - Location 401 Majunga</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/fleet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="logo-container">
+        <a href="../index.html">
+          <img src="../assets/logo.jpg" alt="Location 401 Majunga" class="logo">
+        </a>
+      </div>
+      <nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="#" class="active">Nos Véhicules</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#about">À Propos</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li class="booking-button"><a href="../index.html#booking">Réserver</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="page-title">
+    <div class="container">
+      <h1>Notre Flotte de Véhicules</h1>
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> / <span>Nos Véhicules</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Filters -->
+  <section class="fleet-filters">
+    <div class="container">
+      <div class="filter-container">
+        <div class="filter-group">
+          <label>Type de véhicule</label>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="car">Voitures</button>
+            <button class="filter-btn" data-filter="motorcycle">Motos/Scooters</button>
+            <button class="filter-btn" data-filter="atv">Quads/ATVs</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label for="price-range">Budget journalier</label>
+          <select id="price-range">
+            <option value="all">Tous les prix</option>
+            <option value="0-30">Moins de 30€</option>
+            <option value="30-50">30€ - 50€</option>
+            <option value="50-80">50€ - 80€</option>
+            <option value="80+">Plus de 80€</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="passengers">Passagers</label>
+          <select id="passengers">
+            <option value="all">Tous</option>
+            <option value="1-2">1-2 personnes</option>
+            <option value="3-4">3-4 personnes</option>
+            <option value="5+">5+ personnes</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Grid -->
+  <section class="fleet-grid">
+    <div class="container">
+      <div class="vehicles-grid">
+        <!-- Cars -->
+        <div class="vehicle-card" data-category="car" data-price="75" data-passengers="5">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg" alt="SUV Toyota">
+          </div>
+          <div class="vehicle-details">
+            <h3>Toyota RAV4</h3>
+            <p class="vehicle-type">SUV</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 5 places</li>
+              <li><i class="fas fa-suitcase"></i> 4 bagages</li>
+              <li><i class="fas fa-gas-pump"></i> Diesel</li>
+              <li><i class="fas fa-cog"></i> Automatique</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>75€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+        
+        <div class="vehicle-card" data-category="car" data-price="55" data-passengers="5">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg" alt="Compact Toyota">
+          </div>
+          <div class="vehicle-details">
+            <h3>Toyota Corolla</h3>
+            <p class="vehicle-type">Berline</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 5 places</li>
+              <li><i class="fas fa-suitcase"></i> 3 bagages</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-cog"></i> Manuelle</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>55€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-category="car" data-price="95" data-passengers="7">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/116073/pexels-photo-116073.jpeg" alt="SUV Toyota">
+          </div>
+          <div class="vehicle-details">
+            <h3>Toyota Land Cruiser</h3>
+            <p class="vehicle-type">SUV 4x4</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 7 places</li>
+              <li><i class="fas fa-suitcase"></i> 5 bagages</li>
+              <li><i class="fas fa-gas-pump"></i> Diesel</li>
+              <li><i class="fas fa-cog"></i> Automatique</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>95€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-category="car" data-price="45" data-passengers="4">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/5232661/pexels-photo-5232661.jpeg" alt="Compact Car">
+          </div>
+          <div class="vehicle-details">
+            <h3>Renault Clio</h3>
+            <p class="vehicle-type">Citadine</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 4 places</li>
+              <li><i class="fas fa-suitcase"></i> 2 bagages</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-cog"></i> Manuelle</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>45€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <!-- Motorcycles -->
+        <div class="vehicle-card" data-category="motorcycle" data-price="25" data-passengers="2">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/2519374/pexels-photo-2519374.jpeg" alt="Scooter">
+          </div>
+          <div class="vehicle-details">
+            <h3>Honda PCX 125</h3>
+            <p class="vehicle-type">Scooter</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 2 places</li>
+              <li><i class="fas fa-tachometer-alt"></i> 125cc</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-cog"></i> Automatique</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>25€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-category="motorcycle" data-price="20" data-passengers="2">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/9302911/pexels-photo-9302911.jpeg" alt="Scooter">
+          </div>
+          <div class="vehicle-details">
+            <h3>Yamaha Scooter 110</h3>
+            <p class="vehicle-type">Scooter</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 2 places</li>
+              <li><i class="fas fa-tachometer-alt"></i> 110cc</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-cog"></i> Automatique</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>20€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-category="motorcycle" data-price="35" data-passengers="2">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/5776837/pexels-photo-5776837.jpeg" alt="Motorcycle">
+          </div>
+          <div class="vehicle-details">
+            <h3>Honda CBF 125</h3>
+            <p class="vehicle-type">Moto</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 2 places</li>
+              <li><i class="fas fa-tachometer-alt"></i> 125cc</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-cog"></i> Manuelle</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>35€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <!-- ATVs -->
+        <div class="vehicle-card" data-category="atv" data-price="45" data-passengers="1">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/910623/pexels-photo-910623.jpeg" alt="Quad/ATV">
+          </div>
+          <div class="vehicle-details">
+            <h3>Yamaha Grizzly</h3>
+            <p class="vehicle-type">Quad/ATV</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 1 place</li>
+              <li><i class="fas fa-tachometer-alt"></i> 350cc</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-mountain"></i> Tout-terrain</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>45€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-category="atv" data-price="65" data-passengers="2">
+          <div class="vehicle-image">
+            <img src="https://images.pexels.com/photos/163407/quadbike-atv-little-child-action-163407.jpeg" alt="Quad/ATV">
+          </div>
+          <div class="vehicle-details">
+            <h3>Can-Am Outlander MAX</h3>
+            <p class="vehicle-type">Quad/ATV</p>
+            <ul class="vehicle-features">
+              <li><i class="fas fa-user"></i> 2 places</li>
+              <li><i class="fas fa-tachometer-alt"></i> 570cc</li>
+              <li><i class="fas fa-gas-pump"></i> Essence</li>
+              <li><i class="fas fa-mountain"></i> Tout-terrain</li>
+            </ul>
+            <div class="vehicle-price">
+              <span>À partir de</span>
+              <p>65€ <span>/ jour</span></p>
+            </div>
+            <a href="../index.html#booking" class="btn btn-primary">Réserver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../assets/logo.png" alt="Location 401 Majunga">
+          <p>Louez en toute liberté et sécurité</p>
+        </div>
+        <div class="footer-links">
+          <h3>Liens Rapides</h3>
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="#" class="active">Nos Véhicules</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#about">À Propos</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Suivez-nous</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Inscrivez-vous pour recevoir nos offres spéciales</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Location 401 Majunga. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+  <script src="../js/fleet.js"></script>
+</body>
+</html>
