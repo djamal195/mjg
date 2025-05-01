@@ -1,0 +1,9 @@
+[build]
+  publish = "/"
+
+# Redirection pour les SPA (optionnel)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
